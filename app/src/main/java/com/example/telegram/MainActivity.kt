@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.telegram.databinding.ActivityMainBinding
+import com.example.telegram.ui.ChatsFragment
+import com.example.telegram.ui.SettingsFragment
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -35,6 +37,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initFunc() {
         setSupportActionBar(mToolbar)
+        supportFragmentManager.beginTransaction()
+            .add(R.id.dataContainer, ChatsFragment()).commit() //add fragment
         createHeader()
         createDrawer()
     }
@@ -56,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                     .withIconTintingEnabled(true)
                     .withName("New Secret Chat")
                     .withSelectable(false)
-                    .withIcon(R.drawable.ic_new_group),
+                    .withIcon(R.drawable.ic_lock),
                 PrimaryDrawerItem().withIdentifier(102)
                     .withIconTintingEnabled(true)
                     .withName("New Channel")
@@ -99,7 +103,11 @@ class MainActivity : AppCompatActivity() {
                     position: Int,
                     drawerItem: IDrawerItem<*>
                 ): Boolean {
-                    Toast.makeText(applicationContext, position, Toast.LENGTH_SHORT).show()
+                    when (position) {
+                        7 -> supportFragmentManager.beginTransaction()
+                            .addToBackStack(null)
+                            .replace(R.id.dataContainer, SettingsFragment()).commit()
+                    }
                     return false
                 }
 

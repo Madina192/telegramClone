@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="MaterialDrawerTheme.Light">
+    <style name="AppTheme" parent="MaterialDrawerTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorAccent</item>
 
         <item name="material_drawer_background">@color/material_drawer_background</item>
         <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
@@ -19,7 +20,7 @@
         <item name="material_drawer_legacy_style">false</item> <!-- Enables legacy Material 1 style -->
     </style>
 
-    <style name="AppThemeDark" parent="MaterialDrawerTheme.Dar">
+    <style name="AppThemeDark" parent="MaterialDrawerTheme">
 
     </style>
 
