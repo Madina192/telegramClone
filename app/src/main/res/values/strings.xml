@@ -4,4 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="chats">Chats</string>
     <string name="settings">Settings</string>
+    <string name="default_username">Madina Akpaeva</string>
+    <string name="default_status">online</string>
+    <string name="settings_text_account">Account</string>
 </resources>

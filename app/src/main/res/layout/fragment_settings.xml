@@ -7,6 +7,7 @@
     tools:context=".ui.fragments.SettingsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_header_block"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/colorPrimary"
@@ -15,20 +16,56 @@
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/settings_user_photo"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="@dimen/settings_user_photo_width"
+            android:layout_height="@dimen/settings_user_photo_height"
             android:src="@drawable/ic_person_profile"
-            app:civ_border_width="2dp"
+            app:civ_border_width="@dimen/settings_user_photo_border"
             app:civ_circle_background_color="@color/colorAccent"
-            app:civ_border_color="#ff000000"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/horizontal_margin"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+             />
+        
+        <TextView
+            android:id="@+id/settings_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/default_username"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/normal_text"
+            app:layout_constraintStart_toEndOf="@id/settings_user_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/settings_user_photo"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            />
+
+        <TextView
+            android:id="@+id/settings_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/default_status"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="@dimen/small_text"
+            app:layout_constraintStart_toEndOf="@id/settings_user_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_username"
+            android:layout_marginStart="@dimen/horizontal_margin"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/settings_tv_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/settings_header_block"
+        android:textColor="@color/primary"
+        android:text="@string/settings_text_account"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="16dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
