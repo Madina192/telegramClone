@@ -5,6 +5,7 @@
     <dimen name="normal_text">16sp</dimen>
     <dimen name="vertical_margin">10dp</dimen>
     <dimen name="small_text">14sp</dimen>
+    <dimen name="vertical_large_margin">16dp</dimen>
 
     <!--Settings Fragment-->
     <dimen name="settings_user_photo_width">55dp</dimen>
