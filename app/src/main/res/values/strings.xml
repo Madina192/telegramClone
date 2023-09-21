@@ -8,4 +8,9 @@
     <string name="default_status">online</string>
     <string name="settings_text_account">Account</string>
     <string name="default_phone_number">+996708131700</string>
+    <string name="settings_change_phone_number">Tap to change phone number</string>
+    <string name="default_login">madinaakpaeva</string>
+    <string name="settings_username">Username</string>
+    <string name="bio">Bio</string>
+    <string name="settings_about_yourself">Add a few words about yourself</string>
 </resources>

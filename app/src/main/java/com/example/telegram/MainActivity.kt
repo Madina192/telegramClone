@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(mToolbar)
         myAppDrawer.create()
         supportFragmentManager.beginTransaction()
-            .add(R.id.dataContainer, ChatsFragment()).commit() //added fragment
+            .add(R.id.data_container, ChatsFragment()).commit() //added fragment
     }
 
     private fun initFields() {
